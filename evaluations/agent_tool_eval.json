@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sample_tool_001",
+    "question": "Hello, how are you?",
+    "expected_tool": false
+  },
+  {
+    "id": "sample_tool_002",
+    "question": "What is the Northstar Atelier production time?",
+    "expected_tool": true
+  },
+  {
+    "id": "sample_tool_003",
+    "question": "What is the capital of France?",
+    "expected_tool": false
+  },
+  {
+    "id": "sample_tool_004",
+    "question": "Can a customer return a custom-size item?",
+    "expected_tool": true
+  },
+  {
+    "id": "sample_tool_005",
+    "question": "Write me a two-line poem about flowers.",
+    "expected_tool": false
+  }
+]

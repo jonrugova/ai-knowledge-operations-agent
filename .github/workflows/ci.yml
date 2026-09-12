@@ -1,0 +1,51 @@
+name: Offline CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-22.04
+    env:
+      APP_ENV: development
+      DATABASE_URL: postgresql://ci_user:ci_password@127.0.0.1:5432/ci_database
+      OPENAI_API_KEY: offline-test-placeholder
+      SESSION_SECRET: ci-session-secret
+      ADMIN_PASSWORD: ci-admin-password
+      EMPLOYEE_PASSWORD: ci-employee-password
+      FRONTEND_ORIGIN: http://localhost:8000
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run offline Python tests
+        run: python run_quick_tests.py
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build

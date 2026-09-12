@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sample_answer_001",
+    "question": "How long does Northstar Atelier production normally take?",
+    "expected_tool": true,
+    "acceptable_sections": ["1. STANDARD PRODUCTION TIME"],
+    "expected_answer_terms": [["12 calendar production days"]]
+  },
+  {
+    "id": "sample_answer_002",
+    "question": "Can a customer return a custom-size item?",
+    "expected_tool": true,
+    "acceptable_sections": ["4. CUSTOM-SIZE RETURNS"],
+    "expected_answer_terms": [["final sale", "not eligible"], ["return"]]
+  },
+  {
+    "id": "sample_answer_003",
+    "question": "Who pays import duties?",
+    "expected_tool": true,
+    "acceptable_sections": ["8. DUTIES AND TAXES"],
+    "expected_answer_terms": [["customer"], ["duties", "taxes"]]
+  },
+  {
+    "id": "sample_answer_004",
+    "question": "Does Northstar Atelier offer gift wrapping?",
+    "expected_tool": true,
+    "acceptable_sections": ["10. GIFT WRAPPING"],
+    "expected_answer_terms": [["does not"], ["gift wrapping"]]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sample_multi_001",
+    "question": "What is the Northstar Atelier return policy?",
+    "expected_tools": ["search_company_knowledge"]
+  },
+  {
+    "id": "sample_multi_002",
+    "question": "A customer plans to order on 2026-10-01. What delivery window should I give them?",
+    "expected_tools": ["calculate_delivery_timeline"]
+  },
+  {
+    "id": "sample_multi_003",
+    "question": "Who pays import duties?",
+    "expected_tools": ["search_company_knowledge"]
+  },
+  {
+    "id": "sample_multi_004",
+    "question": "What is 20 divided by 4?",
+    "expected_tools": []
+  },
+  {
+    "id": "sample_multi_005",
+    "question": "Does Northstar Atelier offer gift wrapping?",
+    "expected_tools": ["search_company_knowledge"]
+  }
+]

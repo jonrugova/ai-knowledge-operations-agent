@@ -1,0 +1,35 @@
+[
+  {
+    "id": "sample_retrieval_001",
+    "question": "How long does Northstar Atelier production normally take?",
+    "primary_section": "1. STANDARD PRODUCTION TIME",
+    "acceptable_sections": [
+      "1. STANDARD PRODUCTION TIME"
+    ]
+  },
+  {
+    "id": "sample_retrieval_002",
+    "question": "How long does courier delivery usually take after production?",
+    "primary_section": "2. SHIPPING WINDOW",
+    "acceptable_sections": [
+      "2. SHIPPING WINDOW"
+    ]
+  },
+  {
+    "id": "sample_retrieval_003",
+    "question": "Can a customer return a custom-size item?",
+    "primary_section": "4. CUSTOM-SIZE RETURNS",
+    "acceptable_sections": [
+      "4. CUSTOM-SIZE RETURNS",
+      "3. STANDARD-SIZE RETURNS"
+    ]
+  },
+  {
+    "id": "sample_retrieval_004",
+    "question": "Who pays import duties and local taxes?",
+    "primary_section": "8. DUTIES AND TAXES",
+    "acceptable_sections": [
+      "8. DUTIES AND TAXES"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "sample_combination_001",
+    "question": "A customer plans to order on 2026-10-01. What delivery window should I give them, and can they return a custom-size item?",
+    "expected_tools": [
+      "calculate_delivery_timeline",
+      "search_company_knowledge"
+    ],
+    "expected_answer_terms": [
+      ["October"],
+      ["final sale", "not eligible"],
+      ["return"]
+    ]
+  },
+  {
+    "id": "sample_combination_002",
+    "question": "A customer is asking about production time and who pays import duties.",
+    "expected_tools": ["search_company_knowledge"],
+    "expected_answer_terms": [
+      ["12 calendar production days"],
+      ["customer", "duties"]
+    ]
+  }
+]
