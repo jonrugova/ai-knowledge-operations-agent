@@ -138,6 +138,13 @@ class PublicRepositorySafetyTests(unittest.TestCase):
             r"(?i)(sk-[A-Za-z0-9_-]{20,}|postgres(ql)?://[^$\s]+)",
         )
 
+    def test_frontend_lockfile_does_not_use_private_package_registry(self):
+        lockfile = (ROOT / "frontend" / "package-lock.json").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotIn("package-firewall.replit.internal", lockfile)
+        self.assertIn("https://registry.npmjs.org/", lockfile)
+
 
 if __name__ == "__main__":
     unittest.main()
